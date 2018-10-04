@@ -4,6 +4,8 @@ Mixpanel Data Export
 [![Build status][travis-img]][travis-url]
 [![Dependency status][david-img]][david-url]
 
+This is a fork of a fork — Mixpanel export returns JSONP which JSON.parse() will fail. I have removed the parse so data is returned correctly
+
 This is a fork of [michaelcarter/mixpanel-data-export-js](https://github.com/michaelcarter/mixpanel-data-export-js) which has been optimized for Node.js (no browser support). It has a single dependency on [needle](https://www.npmjs.com/package/needle).
 
 Simply put, this is a JavaScript library that makes [Mixpanel's data export API](https://mixpanel.com/docs/api-documentation/data-export-api#libs-js) easy to use. Simply instantiate the class with your API secret and key and then make calls to api methods and get correctly formatted data back via a promise.
