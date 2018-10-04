@@ -122,7 +122,9 @@ MixpanelExport.prototype._parseResponse = function(method, parameters, result) {
     var step1 = result.replace(new RegExp('\n', 'g'), ',');
     var step2 = '['+step1+']';
     var result = step2.replace(',]', ']');
-    return JSON.parse(result);
+    // NOTE results that are returned are JSONP - no NOT attempt to parse this info
+    // will add correct handling in a later commit
+    return result;
   }
 
   return JSON.parse(result);
